@@ -13,31 +13,28 @@ int _sqrt_recursion(int n)
 	else if (n == 0 || n == 1)
 		return (n);
 	else
-		return (sqrt_aid(n, 1, n));
+		return (sqrt_aid(2, n, n));
 }
 /**
  * sqrt_aid - Helps check for natural numbers
  * @a: beggining
  * @z: end
- * @n: gien in
+ * @x: gien in
  * Return: The square roots
  */
-int sqrt_aid(int n, int a, int z)
+int sqrt_aid(int x, int a, int z)
 {
-	int m;
-	int s;
+	long m;
 
-	if (a > z)
+	if (a >= z)
 	{
-		return (-1);
+		m = a + (z - a) / 2;
+		if (m * m  == x)
+			return (m);
+		else if (m * m > x)
+			return (sqrt_aid(a, m - 1, x));
+		else if (m * m < x)
+			return (sqrt_aid(m + 1, z, x));
 	}
-	m = (a + z) / 2;
-	s = m * m;
-
-	if (s == n)
-		return (m);
-	else if (s < n)
-		return (sqrt_aid(n, m + 1, z));
-	else
-		return (sqrt_aid(n, a, m - 1));
+	return (-1);
 }
