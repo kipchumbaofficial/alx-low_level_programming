@@ -15,11 +15,17 @@ int main(void)
 
 	while (a <= b)
 	{
-		putchar(a);
-		putchar(c);
-		putchar(d);
+		if (a < b)
+		{
+			putchar(a);
+			putchar(c);
+			putchar(d);
+		}
+		else
+		{
+			putchar(a);
+		}
 		a++;
 	}
-	putchar('\n');
 	return (0);
 }
