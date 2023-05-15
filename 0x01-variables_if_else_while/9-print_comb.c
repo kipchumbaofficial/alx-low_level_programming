@@ -19,12 +19,12 @@ int main(void)
 		{
 			putchar(a);
 			putchar(c);
+			putchar(d);
 		}
 		else
 		{
 			putchar(a);
 		}
-		putchar(d);
 		a++;
 	}
 	return (0);
