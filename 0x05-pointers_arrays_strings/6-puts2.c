@@ -15,7 +15,7 @@ int str_len(char *str)
 		len++;
 		str++;
 	}
-	return (len);
+	return (len - 1);
 }
 /**
  * puts2 - Prints string incremented by 2
