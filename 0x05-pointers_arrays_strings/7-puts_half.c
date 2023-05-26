@@ -33,7 +33,8 @@ void puts_half(char *str)
 		l_half = len / 2;
 		for (i = l_half; i <= len; i++)
 		{
-			_putchar(str[i]);
+			if (*str != '\0')
+				_putchar(str[i]);
 		}
 	}
 	else
@@ -41,7 +42,8 @@ void puts_half(char *str)
 		l_half = (len - 1) / 2;
 		for (j = l_half; j <= len; j++)
 		{
-			_putchar(str[j]);
+			if (*str != '\0')
+				_putchar(str[j]);
 		}
 	}
 	_putchar('\n');
