@@ -21,6 +21,6 @@ void print_array(int *a, int n)
 	}
 	else
 	{
-		fprintf(stderr, "length can be less than 0\n");
+		printf("!\n");
 	}
 }
