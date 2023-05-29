@@ -21,6 +21,6 @@ void print_array(int *a, int n)
 	}
 	else
 	{
-		return;
+		fprintf(stderr, "length can be less than 0\n");
 	}
 }
