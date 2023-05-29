@@ -25,15 +25,18 @@ int str_len(char *str)
 void rev_string(char *s)
 {
 	int len;
-	int i;
-	char *str;
+	int a, z;
+	char temp;
 
 	len = str_len(s);
-	for (i = len; i >= 0; i--)
+	a = 0;
+	z = len;
+	while (a < z)
 	{
-		if(*s != '\0')
-		{
-			str[i] = ;
-		}
+		temp = s[a];
+		s[a] = s[z];
+		s[z] = temp;
+		a++;
+		z--;
 	}
 }
