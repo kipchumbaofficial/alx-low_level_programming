@@ -22,7 +22,7 @@ int isPrime(int n, int div)
 	}
 	else
 	{
-		return (isPrime (n, div - 1));
+		return (isPrime(n, div - 1));
 	}
 }
 /**
