@@ -7,25 +7,25 @@
  */
 void minChange(int cents)
 {
+	int coins;
+
 	if (cents < 0)
 	{
 		printf("%d\n", 0);
 	}
-	else if (cents <= 10)
-	{
-		printf("%d\n", 1);
-	}
-	else if (cents <= 25 && cents > 10)
-	{
-		printf("%d\n", 3);
-	}
-	else if (cents <= 100 && cents > 25)
-	{
-		printf("%d\n", 4);
-	}
 	else
 	{
-		printf("%d\n", 5);
+		coins = 0;
+		coins += cents / 25;
+		cents %= 25;
+		coins += cents / 10;
+		cents %= 10;
+		coins += cents / 5;
+		cents %= 5;
+		coins += cents / 2;
+		cents %= 2;
+		coins += cents;
+		printf("%d\n", coins);
 	}
 }
 /**
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 {
 	int cents;
 
-	if (argc == 1 || argc > 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
