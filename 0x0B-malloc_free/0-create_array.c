@@ -9,24 +9,22 @@
 char *create_array(unsigned int size, char c)
 {
 	char *str;
-	int i, len;
+	int i;
 
 	if (size == 0)
 	{
 		return (NULL);
 	}
-	len = size + 1;
-	str = malloc(len * sizeof(char));
+	str = malloc(size * sizeof(char));
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 	i = 0;
-	while (i < len)
+	while (i <= size)
 	{
 		str[i] = c;
 		i++;
 	}
-	str[i] = '\0';
 	return (str);
 }
