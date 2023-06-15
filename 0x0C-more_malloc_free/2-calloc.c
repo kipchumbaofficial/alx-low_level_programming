@@ -11,6 +11,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	void *ptr;
 	char *str;
 	unsigned int i, prod;
+
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
