@@ -40,6 +40,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		l = n;
 	size = strLen(s1) + l;
 	str = malloc((size + 1) * sizeof(char));
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	j = strLen(s1);
 	for (i = 0; i < j; i++)
 	{
