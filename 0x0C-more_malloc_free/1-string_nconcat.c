@@ -40,7 +40,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else
 		l = n;
 	size = strLen(s1) + l;
-	printf("%d\n", size);
 	str = malloc((size + 1) * sizeof(char));
 	if (str == NULL)
 	{
