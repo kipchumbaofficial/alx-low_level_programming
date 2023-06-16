@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * strLen - Gets length of a string
  * @s: String to get length
@@ -23,7 +24,7 @@ unsigned int strLen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *str;
-	int i, size, j;
+	unsigned int i, size, j;
 	unsigned int l;
 
 	if (s1 == NULL)
@@ -39,6 +40,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else
 		l = n;
 	size = strLen(s1) + l;
+	printf("%d\n", size);
 	str = malloc((size + 1) * sizeof(char));
 	if (str == NULL)
 	{
@@ -51,7 +53,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	i = 0;
 	j = strLen(s1);
-	while (j < size || i < size)
+	while (j < size || i < l)
 	{
 		str[j] = s2[i];
 		i++;
