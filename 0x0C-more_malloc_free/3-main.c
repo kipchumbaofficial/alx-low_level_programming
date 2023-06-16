@@ -38,8 +38,8 @@ int main(void)
 {
 	int *a;
 
-	a = array_range(10, 10);
-	simple_print_buffer(a, 11);
+	a = array_range(-2024, -1024);
+	simple_print_buffer(a, 1000);
 	free(a);
 	return (0);
 }
