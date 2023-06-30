@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 /**
- * struct list - Structure of string, int, pointer
+ * struct list_s - Structure of string, int, pointer
  * @str: string
  * @len: Length of the string
  * @next: Address to next node
