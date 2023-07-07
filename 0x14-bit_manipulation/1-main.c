@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 #include "main.h"
 
 /**
@@ -12,7 +13,7 @@ int main(void)
     printf("\n");
     print_binary(1);
     printf("\n");
-    print_binary(98);
+    print_binary(ULONG_MAX);
     printf("\n");
     print_binary(1024);
     printf("\n");
