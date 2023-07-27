@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * checkElf - Checks if a file is an ELF file.
- * @e_ident: A pointer to an array containing the ELF magic numbers.
+ * checkElf - Checks if a file is an ELF file or not.
+ * @e_ident: Magic.
  *
  * Description: If the file is not an ELF file - exit code 98.
  */
