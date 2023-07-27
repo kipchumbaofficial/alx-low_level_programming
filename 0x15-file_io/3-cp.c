@@ -14,7 +14,7 @@ void _printerror(int status, char *filename)
 	if (status == 99)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
-		exit(98);
+		exit(99);
 	}
 
 }
