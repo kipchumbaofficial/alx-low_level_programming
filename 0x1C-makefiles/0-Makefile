@@ -1,0 +1,9 @@
+all: school
+
+school: school.c main.c
+	gcc -Werror -pedantic -Wall -std=gnu89 -Wextra -o $@ $^
+
+clean:
+	rm -f school
+
+.PHONY: all clean
