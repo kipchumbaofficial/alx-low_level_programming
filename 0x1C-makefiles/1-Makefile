@@ -1,0 +1,12 @@
+# School makefile with variables
+
+CC = gcc
+SRC = school.c main.c
+
+all: $(SRC)
+	$(CC) $(SRC) -Wall -Werror -Wextra -pedantic -std=gnu89 -o school
+
+clean:
+	rm -f school
+
+.PHONY: all clean
